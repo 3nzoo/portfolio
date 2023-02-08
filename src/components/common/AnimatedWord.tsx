@@ -3,7 +3,7 @@ import React from 'react';
 
 type Props = {
   word: string;
-  initialProp?: {};
+  initialProp?: any;
   visibileProp?: {};
 };
 
