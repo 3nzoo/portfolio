@@ -1,18 +1,19 @@
-import React from 'react';
+import { forwardRef } from 'react';
 
-type Props = {};
-
-const EnzoSection = (props: Props) => {
+const EnzoSection = forwardRef<HTMLDivElement>((props, ref) => {
   return (
-    <div className='snap-start snap-center h-screen min-w-screen w-screen flex flex-wrap '>
-      <section className='sm:w-1/2 w-full border-2 border-red-600'>
-        <p>text definiition</p>
+    <div
+      className='snap-start h-screen min-w-screen w-screen flex flex-wrap '
+      ref={ref}
+    >
+      <section className='sm:w-full md:w-1/2 w-full border-2 border-red-600'>
+        <p>Personal History</p>
       </section>
-      <section className='sm:w-1/2 w-full border-2 border-sky-600'>
+      <section className='sm:w-full md:w-1/2 w-full border-2 border-sky-600'>
         <p>Graph stacks</p>
       </section>
     </div>
   );
-};
+});
 
 export default EnzoSection;
