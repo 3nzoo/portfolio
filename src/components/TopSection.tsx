@@ -2,6 +2,7 @@ import React, { forwardRef, RefObject, useRef, useState } from 'react';
 import { motion, Variants } from 'framer-motion';
 import { useFollowPointer } from '../hooks/useFollowPointer';
 import AnimatedWord from './common/AnimatedWord';
+import laptop from '../assets/laptop.png';
 
 type Props = {
   onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
@@ -141,7 +142,7 @@ const TopSection = forwardRef<HTMLDivElement, Props>(({ onClick }, ref) => {
         </section>
         <section className='md:block md:w-3/6 hidden'>
           <div className='flex flex-col items-start xs:items-end md:items-end lg:items-end xl:items-end justify-center h-full '>
-            <img className='w-4/5 max-w-sm' src='/src/assets/laptop.png' />
+            <img className='w-4/5 max-w-sm' src={laptop} />
           </div>
         </section>
       </div>
