@@ -4,7 +4,7 @@ import React, { RefObject, useRef, useState } from 'react';
 import './App.css';
 import Contact from './components/Contact';
 import EnzoSection from './components/EnzoSection';
-import Estimate from './components/Estimate';
+
 import { Matrix } from './components/MotionComponent';
 import Projects from './components/Projects';
 import Responsive from './components/Responsive';
@@ -82,7 +82,6 @@ function App() {
         <EnzoSection ref={aboutme_ref} />
         <Responsive ref={responsive} />
         <Projects />
-
         <Contact />
       </div>
       {showTopButton && (

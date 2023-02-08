@@ -84,11 +84,11 @@ export function Matrix() {
   );
 }
 
-const Box = ({ x, y, row, column }) => {
+const Box = ({ x, y, row, column }: any) => {
   const top = column * boxSize;
   const left = row * boxSize;
 
-  const angle = useMotionValue(0);
+  const angle = useMotionValue<any>(0);
   const scale = useMotionValue(0);
   const borderRadius = useMotionValue(0);
   const background = useMotionValue('');
@@ -143,12 +143,12 @@ const Box = ({ x, y, row, column }) => {
         scale,
         borderRadius,
       }}
-      rotate={angle}
+      // rotate={angle}
     />
   );
 };
 
-function calcAngle(top, left, cursorTop, cursorLeft) {
+function calcAngle(top: any, left: any, cursorTop: any, cursorLeft: any) {
   let angle = Math.atan2(cursorTop - left, cursorLeft - top) * (180 / Math.PI);
   return angle < 0 ? -(angle + 540) : -(angle + 180);
 }
@@ -163,12 +163,12 @@ const styles = {
     position: 'absolute',
     top: 0,
     left: 0,
-  },
+  } as const,
   container: {
     position: 'relative',
     width: containerSize,
     height: containerSize,
-  },
+  } as const,
   Box: {
     height: boxSize,
     width: boxSize,
